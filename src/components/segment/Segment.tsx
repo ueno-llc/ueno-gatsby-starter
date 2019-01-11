@@ -9,7 +9,7 @@ interface ISegmentProps {
   container?: boolean;
 }
 
-const Segment = (props: ISegmentProps) => {
+export const Segment = (props: ISegmentProps) => {
   const { children, container } = props;
   const content = container ? <Container>{children}</Container> : children;
 
@@ -23,5 +23,3 @@ const Segment = (props: ISegmentProps) => {
 Segment.defaultProps = {
   container: true,
 };
-
-export { Segment };

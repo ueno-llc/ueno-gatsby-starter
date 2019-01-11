@@ -12,20 +12,17 @@ interface IProps {
   children: React.ReactNode;
 }
 
-export default class AppLayout extends React.PureComponent<IProps> {
+export default ({ children }: IProps) => {
+  const options = {
+    header: true,
+    ...get(React.Children.toArray(children), '0.type.layoutOptions', {}),
+  };
 
-  public get options() {
-    return {
-      header: true,
-      ...get(React.Children.toArray(this.props.children), '0.type.layoutOptions', {}),
-    };
-  }
-
-  public renderLayout = (data: any) => {
+  const renderLayout = (data: any) => {
     const { title } = data.site.siteMetadata;
 
     return (
-      <React.Fragment>
+      <>
         <Helmet
           title={title}
           meta={[
@@ -36,31 +33,29 @@ export default class AppLayout extends React.PureComponent<IProps> {
           <html lang="en" />
         </Helmet>
 
-        {this.options.header && <Header title={title} />}
+        {options.header && <Header title={title} />}
 
         <div className={s.layout}>
-          {this.props.children}
+          {children}
         </div>
 
         <Devtools />
-      </React.Fragment>
+      </>
     );
-  }
+  };
 
-  public render() {
-    return (
-      <StaticQuery
-        query={graphql`
-          query SiteTitleQuery {
-            site {
-              siteMetadata {
-                title
-              }
+  return (
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
             }
           }
-        `}
-        render={this.renderLayout}
-      />
-    );
-  }
-}
+        }
+      `}
+      render={renderLayout}
+    />
+  );
+};

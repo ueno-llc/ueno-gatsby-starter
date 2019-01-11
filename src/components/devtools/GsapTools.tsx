@@ -2,38 +2,35 @@ import * as React from 'react';
 
 import s from './GsapTools.scss';
 
+interface IProps {
+  button: boolean;
+}
+
+// tslint:disable-next-line:no-var-requires
 const GsapDevTools = require('gsap-tools').default;
 const LOCAL_STORAGE_GSAPTOOLS = '_devtoolsGsapToolsVisible';
 
-export class GsapTools extends React.Component<{ button: boolean }> {
+export const GsapTools = ({ button }: IProps) => {
+  const [visible, setVisible] = React.useState(false);
 
-  state = {
-    visible: false,
-  }
-
-  onToggleGsapTools = () => {
-    const { visible } = this.state;
-    this.setState({ visible: !visible });
+  const onToggleGsapTools = () => {
+    setVisible(!visible);
     localStorage.setItem(LOCAL_STORAGE_GSAPTOOLS, String(!visible));
-  }
+  };
 
-  render() {
-    const { visible } = this.state;
-    const { button } = this.props;
+  return (
+    <>
+      {button && (
+        <button className={s(s.button, { visible })} onClick={onToggleGsapTools}>
+          GSAP
+        </button>
+      )}
 
-    return (
-      <>
-        {button && (
-          <button className={s(s.button, { visible })} onClick={this.onToggleGsapTools}>
-            GSAP
-          </button>
-        )}
-        <GsapDevTools
-          onClick={this.onToggleGsapTools}
-          isVisible={visible}
-          isFixed
-        />
-      </>
-    );
-  }
-}
+      <GsapDevTools
+        onClick={onToggleGsapTools}
+        isVisible={visible}
+        isFixed
+      />
+    </>
+  );
+};

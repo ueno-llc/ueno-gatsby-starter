@@ -11,15 +11,11 @@ interface IProps {
   button: boolean;
 }
 
-const GridOverlay = (props: IProps) => {
+export const GridOverlay = (props: IProps) => {
   const gridOverlayRef: React.RefObject<HTMLDivElement> = React.useRef(null);
   const [isHorizontalVisible, setHorizontal] = React.useState<boolean>(false);
   const [isVerticalVisible, setVertical] = React.useState<boolean>(false);
-  const { columns, button } = props;
-
-  // componentWillReceiveProps(props: IProps) {
-  //   this.setup(props);
-  // }
+  const { columns, baseline, button } = props;
 
   const onKeyDown = (e: KeyboardEvent) => {
     if (e.ctrlKey && e.keyCode === 76) {
@@ -37,9 +33,7 @@ const GridOverlay = (props: IProps) => {
     setVertical(!isVerticalVisible);
   };
 
-  const setup = (opts = props) => {
-    const { columns: clm, baseline } = opts;
-
+  const setup = () => {
     const horizontalVisible = (localStorage.getItem(LOCAL_STORAGE_KEY_HORIZONTAL) === 'true');
     const verticalVisible = (localStorage.getItem(LOCAL_STORAGE_KEY_VERTICAL) === 'true');
 
@@ -47,14 +41,14 @@ const GridOverlay = (props: IProps) => {
     setVertical(verticalVisible);
 
     if (gridOverlayRef.current) {
-      gridOverlayRef.current.style.setProperty('--grid-column-count', String(clm));
+      gridOverlayRef.current.style.setProperty('--grid-column-count', String(columns));
       gridOverlayRef.current.style.setProperty('--grid-baseline', `${baseline}px`);
       gridOverlayRef.current.style.setProperty('--grid-baseline-calc', String(baseline));
     }
   };
 
   React.useEffect(() => {
-    setup(props);
+    setup();
     document.addEventListener('keydown', onKeyDown);
 
     return () => {
@@ -65,7 +59,7 @@ const GridOverlay = (props: IProps) => {
   return (
     <div
       ref={gridOverlayRef}
-      className={s('grid', { isHorizontalVisible }, { isVerticalVisible })}
+      className={s(s.grid, { isHorizontalVisible }, { isVerticalVisible })}
     >
       <div className={s.grid__container}>
         <div className={s.grid__row} data-columns={columns}>
@@ -79,7 +73,7 @@ const GridOverlay = (props: IProps) => {
 
       {button ? (
         <>
-          <button className={s('grid__button', { isVerticalVisible })} onClick={onToggleVertical}>
+          <button className={s(s.grid__button, { isVerticalVisible })} onClick={onToggleVertical}>
             <svg className={s.grid__button__svg} width="14px" height="14px" viewBox="0 0 14 14">
               <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <rect x="0" y="0" width="2" height="14" />
@@ -90,7 +84,7 @@ const GridOverlay = (props: IProps) => {
             </svg>
           </button>
 
-          <button className={s('grid__button', { isHorizontalVisible })} onClick={onToggleHorizontal}>
+          <button className={s(s.grid__button, { isHorizontalVisible })} onClick={onToggleHorizontal}>
             <svg className={s.grid__button__svg} width="14px" height="14px" viewBox="0 0 14 14">
               <g
                 stroke="none"
@@ -117,5 +111,3 @@ GridOverlay.defaultProps = {
   baseline: 16,
   button: false,
 };
-
-export { GridOverlay };
