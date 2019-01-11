@@ -7,12 +7,12 @@
 }
 
 .grid {
-  z-index: 9001; // over 9000 !!!
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 9001;
 
   overflow: hidden;
   pointer-events: none;
@@ -32,7 +32,7 @@
     opacity: 1;
   }
 
-  &.isHorizontalIsVisible {
+  &IsHorizontalIsVisible {
     background:
       linear-gradient(to bottom, rgba(0, 0, 0, 0) calc(100% - (1 / var(--grid-baseline-calc) * 100%)), rgba(0, 0, 0, 0.05) calc(100% - (1 / var(--grid-baseline-calc) * 100%))),
       linear-gradient(to bottom, rgba(0, 0, 0, 0) calc(100% - (1 / var(--grid-baseline-calc) * 100%)), rgba(255, 255, 255, 0.15) calc(100% - (1 / var(--grid-baseline-calc) * 100%)));
@@ -81,9 +81,9 @@
     @include reset-button;
 
     position: fixed;
-    right: 180px;
+    right: 75px;
     top: 0;
-    z-index: 9001; // over 9000 !!!
+    z-index: 9001;
     opacity: 1;
 
     padding: 0 15px;
@@ -114,7 +114,7 @@
     }
 
     &:first-of-type {
-      right: 236px;
+      right: 131px;
     }
 
     &__svg {
@@ -126,8 +126,8 @@
     }
 
     // stylelint-disable
-    &.isHorizontalIsVisible,
-    &.isVerticalIsVisible {
+    &.horizontal,
+    &.vertical {
       g,
       &:hover g {
         fill: #328bf3;
@@ -137,8 +137,6 @@
   }
 }
 
-// Polyfill for browsers without css variables
-// Like Safari 9
 @for $i from 1 through $grid-column-count {
   [data-columns='#{$i}'] .grid__column {
     min-width: 100% / $i;

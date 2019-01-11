@@ -3,10 +3,10 @@ import * as React from 'react';
 import { GridOverlay } from './GridOverlay';
 import { GsapTools } from './GsapTools';
 
-const LOCAL_STORAGE_KEY_VISIBLE = '_devtoolsVisible';
+const LOCAL_STORAGE_KEY_VISIBLE = '_uenoDevtoolsVisible';
 
 export const Devtools = () => {
-  const [visible, setVisible] = React.useState(false);
+  const [visible, setVisible] = React.useState(localStorage.getItem(LOCAL_STORAGE_KEY_VISIBLE) === 'true');
 
   const onKeyDown = (e: KeyboardEvent) => {
     if (e.ctrlKey && e.keyCode === 75) {
@@ -21,10 +21,6 @@ export const Devtools = () => {
 
   React.useEffect(() => {
     document.addEventListener('keydown', onKeyDown, false);
-
-    if (localStorage.getItem(LOCAL_STORAGE_KEY_VISIBLE) === 'true') {
-      setVisible(true);
-    }
 
     return () => {
       document.removeEventListener('keydown', onKeyDown, false);

@@ -8,7 +8,7 @@ interface IProps {
 
 // tslint:disable-next-line:no-var-requires
 const GsapDevTools = require('gsap-tools').default;
-const LOCAL_STORAGE_GSAPTOOLS = '_devtoolsGsapToolsVisible';
+const LOCAL_STORAGE_GSAPTOOLS = '_uenoDevtoolsGsapTools';
 
 export const GsapTools = ({ button }: IProps) => {
   const [visible, setVisible] = React.useState(false);
@@ -17,6 +17,12 @@ export const GsapTools = ({ button }: IProps) => {
     setVisible(!visible);
     localStorage.setItem(LOCAL_STORAGE_GSAPTOOLS, String(!visible));
   };
+
+  React.useEffect(() => {
+    if (localStorage.getItem(LOCAL_STORAGE_GSAPTOOLS) === 'true') {
+      setVisible(true);
+    }
+  }, []);
 
   return (
     <>

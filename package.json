@@ -35,8 +35,9 @@
     "start": "gatsby serve --port ${PORT:-3000}",
     "build": "gatsby build",
     "clean": "rimraf .cache public",
-    "test": "tsc && npm run lint",
+    "test": "tsc && npm run lint && npm run stylelint",
     "lint": "tslint --fix 'src/**/*.{ts,tsx}' -p .",
+    "stylelint": "stylelint 'src/**/*.scss' --syntax scss",
     "dev": "gatsby develop"
   },
   "devDependencies": {
