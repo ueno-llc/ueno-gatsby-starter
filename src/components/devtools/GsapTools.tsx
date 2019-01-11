@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+
 import s from './GsapTools.scss';
 
 const GsapDevTools = require('gsap-tools').default;
