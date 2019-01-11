@@ -7,7 +7,6 @@ import s from './Header.scss';
 
 interface IProps {
   children?: React.ReactNode;
-  title?: string;
 }
 
 export const Header = ({ children }: IProps) => (

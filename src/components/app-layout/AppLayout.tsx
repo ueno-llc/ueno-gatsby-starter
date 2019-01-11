@@ -1,10 +1,11 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
-import { get } from 'lodash';
 
 import { Header } from 'components/header/Header';
 import { Devtools } from 'components/devtools/Devtools';
+
+import 'styles/fonts.scss';
 
 import s from './AppLayout.scss';
 
@@ -13,16 +14,11 @@ interface IProps {
 }
 
 export default ({ children }: IProps) => {
-  const options = {
-    header: true,
-    ...get(React.Children.toArray(children), '0.type.layoutOptions', {}),
-  };
-
   const renderLayout = (data: any) => {
     const { title } = data.site.siteMetadata;
 
     return (
-      <>
+      <div className={s.layout}>
         <Helmet
           title={title}
           meta={[
@@ -33,14 +29,12 @@ export default ({ children }: IProps) => {
           <html lang="en" />
         </Helmet>
 
-        {options.header && <Header title={title} />}
+        <Header />
 
-        <div className={s.layout}>
-          {children}
-        </div>
+        {children}
 
         <Devtools />
-      </>
+      </div>
     );
   };
 

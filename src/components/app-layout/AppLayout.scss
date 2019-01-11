@@ -7,7 +7,5 @@
 .layout {
   display: block;
 
-  &__container {
-    @include container;
-  }
+  min-height: 100vh;
 }

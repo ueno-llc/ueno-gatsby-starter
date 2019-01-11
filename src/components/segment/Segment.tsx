@@ -5,7 +5,7 @@ import { Container } from 'components/container/Container';
 import s from './Segment.scss';
 
 interface ISegmentProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   container?: boolean;
 }
 
