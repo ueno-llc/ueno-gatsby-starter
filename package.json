@@ -11,6 +11,7 @@
   "scripts": {
     "start": "gatsby serve --port ${PORT:-3000}",
     "build": "gatsby build",
+    "heroku-postbuild": "npm run build",
     "clean": "rimraf .cache public",
     "test": "tsc && npm run lint && npm run stylelint",
     "lint": "tslint --fix 'src/**/*.{ts,tsx}' -p .",
