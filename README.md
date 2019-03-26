@@ -1,10 +1,3 @@
-[![logo](https://user-images.githubusercontent.com/937328/51597521-57c62380-1ef3-11e9-99ed-7f9ac3f2804e.png)](https://ueno.co/?utm_source=github&utm_campaign=ueno-gatsby-starter)
-<br /><br />
-![banner](https://user-images.githubusercontent.com/937328/52722136-f13c9e80-2fa2-11e9-9fa9-ae6aa6bcc7db.png)
-<br /><br />
-[![about](https://user-images.githubusercontent.com/937328/51540139-999c8e80-1e4d-11e9-866d-284657a34744.png)](https://ueno.co/contact/?utm_source=github&utm_campaign=ueno-gatsby-starter)
-<br /><br />
-
 ## Ueno Gatsby Starter
 
 Kick off your project with this opinionated boilerplate. This barebones starter ships with the main Gatsby configuration files you might need.
@@ -88,3 +81,7 @@ export const Header = () => (
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+## Netlifly
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cd9d239a-46b6-4066-ad93-532bdd965572/deploy-status)](https://app.netlify.com/sites/agitated-saha-24099f/deploys)
