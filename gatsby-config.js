@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'Ueno Gatsby Starter',
+    title: 'Antonio Almena Portfolio',
   },
   plugins: [
     'gatsby-plugin-ueno',
@@ -13,8 +13,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'ueno-gatsby-starter',
-        short_name: 'starter',
+        name: 'Antonio Almena Portfolio',
+        short_name: 'Antonio Almena',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
