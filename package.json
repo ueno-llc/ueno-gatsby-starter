@@ -1,5 +1,5 @@
 {
-  "name": "ueno-gatsby-starter",
+  "name": "portfolio",
   "description": "Antonio Almena Portfolio using https://github.com/ueno-llc/ueno-gatsby-starter",
   "version": "1.0.0",
   "license": "MIT",
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/9ntonio/ueno-gatsby-starter"
+    "url": "https://github.com/9ntonio/portfolio"
   },
   "scripts": {
     "dev": "gatsby develop",
@@ -40,6 +40,7 @@
     "gatsby-plugin-sharp": "^2.0.31",
     "gatsby-plugin-typescript": "2.0.3",
     "gatsby-plugin-ueno": "2.0.1",
+    "gatsby-source-filesystem": "^2.0.28",
     "gatsby-source-graphql-universal": "^2.0.4",
     "gatsby-transformer-sharp": "2.1.10",
     "gsap": "2.0.2",
