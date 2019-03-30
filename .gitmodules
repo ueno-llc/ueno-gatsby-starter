@@ -1,4 +1,4 @@
 [submodule "src"]
 	path = src
-	url = https://github.com/9ntonio/template-www.git
+	url = https://github.com/9ntonio/portfolio-src.git
 	branch = master
