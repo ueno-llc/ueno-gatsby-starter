@@ -48,7 +48,8 @@
     "lodash": "4.17.11",
     "react": "16.8.0",
     "react-dom": "16.8.0",
-    "react-helmet": "5.2.0"
+    "react-helmet": "5.2.0",
+    "react-player": "^1.10.0"
   },
   "devDependencies": {
     "@babel/core": "7.2.2",
