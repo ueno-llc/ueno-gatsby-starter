@@ -1,36 +1,19 @@
-## Ueno Gatsby Starter
+## Gatsby Portfolio Starter Kit
 
-Kick off your project with this opinionated boilerplate. This barebones starter ships with the main Gatsby configuration files you might need.
+This portfolio starter kit is based on [`Ueno's`](https://ueno.co/) starter (which in turn was an extension of the Gatsby starter) which you can check out here: [`create-ueno-app`](https://github.com/ueno-llc/create-ueno-app). If you want a starter kit that has no portfolio structure what so ever, I would highly recomend using their starter kit. 
+
+Please note that I added a video component, a spacer component, and some portfolio specific block components in hopes that it may help you in your portfolio build. I also stylized mine using global variables you can finde in the [`'src/' folder sub module`](https://github.com/9ntonio/portfolio-src).
 
 ## Installation
 
-Install [create-ueno-app](https://github.com/ueno-llc/create-ueno-app):
+Install [portfolio](https://github.com/9ntonio/portfolio):
 
 ```bash
-npm install -g create-ueno-app
-yarn global add create-ueno-app
+npm install -g gatsby-cli
+gatsby new my-app "https://github.com/9ntonio/portfolio#master --recursive"
 ```
 
-Create your app:
-
-```bash
-create-ueno-app gatsby my-app
-```
-
-<details>
-  <summary>Alternative setup</summary>
-
-  You also have the choice to use `gatsby-cli` to setup your project without installing `create-ueno-app`.
-
-  ```bash
-  npm install -g gatsby-cli
-  gatsby new my-app "https://github.com/ueno-llc/ueno-gatsby-starter#master --recursive"
-  ```
-
-  We recommend you changing straight away `src/components/link/Link.tsx` which is use for our 3 starter kits. You probably want something similar to that: [Link.tsx](https://github.com/ueno-llc/create-ueno-app/blob/master/overwrites/gatsby/Link.tsx).
-</details>
-
-## Things to know
+## Things to know since this is an extension of the [`Ueno`](https://ueno.co/) starter
 
 There are couple of things that are good to know about this starter, compared to the default gatsby starter.
 
