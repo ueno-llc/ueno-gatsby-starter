@@ -2,7 +2,7 @@
 
 This portfolio starter kit is based on [`Ueno's`](https://ueno.co/) starter (which in turn was an extension of the Gatsby starter) which you can check out here: [`create-ueno-app`](https://github.com/ueno-llc/create-ueno-app). If you want a starter kit that has no portfolio structure what so ever, I would highly recommend using their starter kit. 
 
-Please note that I added a video component, a spacer component, and some portfolio specific block components in hopes that it may help you in your portfolio build. I also stylized mine using global variables you can finde in the [`'src/' folder sub module`](https://github.com/9ntonio/portfolio-src).
+Please note that I added a video component, a spacer component, and some portfolio specific block components in hopes that it may help you in your portfolio build. I also stylized mine using global variables you can find in the [`'src/' folder sub module`](https://github.com/9ntonio/portfolio-src).
 
 ## Installation
 
@@ -68,3 +68,5 @@ export const Header = () => (
 ## Netlifly
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cd9d239a-46b6-4066-ad93-532bdd965572/deploy-status)](https://app.netlify.com/sites/agitated-saha-24099f/deploys)
+
+Please let me know if you have any questions or notes that you feel may help improve this project as I plan on expanding it's capabilities over time. I hope this helps 👋🏽. [`Antonio`](mailto:antonio.almena.sf@gmail.com). 
