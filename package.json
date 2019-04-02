@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "description": "Antonio Almena Portfolio using https://github.com/ueno-llc/ueno-gatsby-starter",
+  "description": "Antonio Almena Portfolio extended from https://github.com/ueno-llc/ueno-gatsby-starter",
   "version": "1.0.0",
   "license": "MIT",
   "keywords": [
@@ -9,7 +9,8 @@
     "react",
     "typescript",
     "gatsby-starter",
-    "ueno"
+    "ueno",
+    "portfolio"
   ],
   "contributors": [
     "Birkir Gudjonsson <birkir.gudjonsson@gmail.com>",
