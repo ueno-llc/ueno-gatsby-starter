@@ -34,6 +34,7 @@ module.exports = {
         theme_color: '#99965b',
         display: 'minimal-ui',
         icon: 'src/assets/images/favicon.png',
+        include_favicon: true,
       },
     },
     {
