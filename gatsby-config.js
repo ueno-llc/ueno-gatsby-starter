@@ -34,9 +34,9 @@ module.exports = {
         theme_color: '#99965b',
         display: 'minimal-ui',
         icon: 'src/assets/images/favicon.png',
-        include_favicon: true,
       },
     },
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
