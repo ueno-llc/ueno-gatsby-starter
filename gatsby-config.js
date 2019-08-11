@@ -3,12 +3,23 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: 'Antonio Almena Portfolio',
+    siteUrl: 'https://www.almena.io',
   },
   plugins: [
+    'gatsby-plugin-robots-txt',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-ueno',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
     'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.almena.io',
+        sitemap: 'https://www.almena.io/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
