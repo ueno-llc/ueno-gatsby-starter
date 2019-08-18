@@ -1,6 +1,6 @@
 ## Gatsby Portfolio Starter Kit
 
-This portfolio starter kit is based on [`Ueno's`](https://ueno.co/) starter (which in turn was an extension of the Gatsby starter) which you can check out here: [`create-ueno-app`](https://github.com/ueno-llc/create-ueno-app). If you want a starter kit that has no portfolio structure what so ever, I would highly recommend using their starter kit. 
+This portfolio starter kit is based on [`Ueno's`](https://ueno.co/) starter (which in turn was an extension of the Gatsby starter) which you can check out here: [`create-ueno-app`](https://github.com/ueno-llc/create-ueno-app). If you want a starter kit that has no portfolio structure what so ever, I would highly recommend using their starter kit.
 
 Please note that I added a video component, a spacer component, and some portfolio specific block components in hopes that it may help you in your portfolio build. I also stylized mine using global variables you can find in the [`'src/' folder sub module`](https://github.com/9ntonio/portfolio-src).
 
