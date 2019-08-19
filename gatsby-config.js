@@ -17,7 +17,15 @@ module.exports = {
       options: {
         host: 'https://www.almena.io',
         sitemap: 'https://www.almena.io/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
+        policy: [{
+                  userAgent: 'Twitterbot',
+                  disallow: '*',
+                  allow: '/static/*'
+                },
+                {
+                  userAgent: '*',
+                  allow: '/'
+                }]
       }
     },
     {
