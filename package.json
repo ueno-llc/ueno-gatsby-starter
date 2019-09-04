@@ -59,7 +59,7 @@
     "tslint-origin-ordered-imports-rule": "1.2.2"
   },
   "devDependencies": {
-    "@babel/core": "7.3.4",
+    "@babel/core": "7.5.5",
     "@types/gsap": "1.20.2",
     "@types/lodash": "4.14.122",
     "@types/node": "11.10.4",
