@@ -45,7 +45,7 @@
     "gatsby-plugin-sharp": "2.2.19",
     "gatsby-plugin-sitemap": "2.2.10",
     "gatsby-plugin-typescript": "2.1.6",
-    "gatsby-plugin-ueno": "2.0.1",
+    "gatsby-plugin-ueno": "2.1.0",
     "gatsby-source-filesystem": "2.1.21",
     "gatsby-source-graphql-universal": "2.0.4",
     "gatsby-transformer-sharp": "2.2.13",
