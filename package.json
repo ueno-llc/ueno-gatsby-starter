@@ -69,7 +69,7 @@
     "@types/react-helmet": "5.0.8",
     "@ueno/stylelint-config": "1.1.2",
     "@ueno/tslint-config": "1.0.8",
-    "rimraf": "2.6.3",
+    "rimraf": "2.7.1",
     "stylelint": "9.10.1",
     "tslint": "5.13.1",
     "tslint-react": "3.6.0",
