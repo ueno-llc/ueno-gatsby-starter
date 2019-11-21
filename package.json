@@ -62,7 +62,7 @@
   "devDependencies": {
     "@babel/core": "7.5.5",
     "@types/gsap": "1.20.2",
-    "@types/lodash": "4.14.122",
+    "@types/lodash": "4.14.149",
     "@types/node": "11.10.4",
     "@types/react": "16.8.6",
     "@types/react-dom": "16.8.2",
