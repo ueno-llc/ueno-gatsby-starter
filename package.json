@@ -56,7 +56,7 @@
     "react-dom": "16.8.4",
     "react-helmet": "5.2.0",
     "react-player": "1.12.0",
-    "renovate": "^19.38.2",
+    "renovate": "19.38.2",
     "tslint-origin-ordered-imports-rule": "1.2.2"
   },
   "devDependencies": {
