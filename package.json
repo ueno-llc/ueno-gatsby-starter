@@ -40,7 +40,7 @@
     "gatsby-plugin-netlify": "2.1.11",
     "gatsby-plugin-offline": "2.2.10",
     "gatsby-plugin-react-helmet": "3.1.6",
-    "gatsby-plugin-react-svg": "2.1.0",
+    "gatsby-plugin-react-svg": "2.1.2",
     "gatsby-plugin-robots-txt": "1.5.0",
     "gatsby-plugin-sharp": "2.2.19",
     "gatsby-plugin-sitemap": "2.2.10",
@@ -49,30 +49,32 @@
     "gatsby-source-filesystem": "2.1.21",
     "gatsby-source-graphql-universal": "2.0.4",
     "gatsby-transformer-sharp": "2.2.13",
-    "gsap": "2.1.2",
+    "gsap": "2.1.3",
     "gsap-tools": "1.0.12",
     "lodash": "4.17.15",
     "react": "16.8.4",
     "react-dom": "16.8.4",
-    "react-helmet": "5.2.0",
+    "react-helmet": "5.2.1",
     "react-player": "1.12.0",
-    "renovate": "^19.38.2",
+    "renovate": "19.38.2",
     "tslint-origin-ordered-imports-rule": "1.2.2"
   },
   "devDependencies": {
-    "@babel/core": "7.5.5",
+    "@babel/core": "7.8.3",
     "@types/gsap": "1.20.2",
+
     "@types/lodash": "4.14.122",
     "@types/node": "11.10.4",
     "@types/react": "16.8.6",
     "@types/react-dom": "16.9.4",
     "@types/react-helmet": "5.0.8",
+
     "@ueno/stylelint-config": "1.1.2",
     "@ueno/tslint-config": "1.0.8",
-    "rimraf": "2.6.3",
+    "rimraf": "2.7.1",
     "stylelint": "9.10.1",
-    "tslint": "5.13.1",
+    "tslint": "5.20.1",
     "tslint-react": "3.6.0",
-    "typescript": "3.3.3333"
+    "typescript": "3.7.5"
   }
 }
