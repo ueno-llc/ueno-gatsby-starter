@@ -8,10 +8,22 @@ module.exports = {
   plugins: [
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-ueno',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-ueno',
+      options: {
+        postCssPlugins: [
+          require(`postcss-preset-env`)({
+            stage: 1,
+            browsers: '< 1%'
+          }),
+          require(`cssnano`)
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -70,6 +82,5 @@ module.exports = {
         component: require.resolve('./src/components/app-layout/AppLayout.tsx'),
       },
     },
-    'gatsby-plugin-netlify',
   ],
 }
