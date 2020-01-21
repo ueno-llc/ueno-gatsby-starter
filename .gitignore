@@ -8,8 +8,7 @@
 .cache
 yarn-error.log
 yarn.lock
-node_modules/*
-!node_modules/gatsby-plugin-ueno
+/node_modules
 
 # Build directory
 /public
