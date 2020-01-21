@@ -6,9 +6,10 @@
 
 # Project dependencies
 .cache
-node_modules
 yarn-error.log
 yarn.lock
+node_modules/*
+!node_modules/gatsby-plugin-ueno
 
 # Build directory
 /public
