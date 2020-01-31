@@ -13,7 +13,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-netlify',
     {
-      resolve: 'gatsby-plugin-ueno',
+      resolve: 'gatsby-plugin-ueno-fix',
       options: {
         postCssPlugins: [
           require(`postcss-preset-env`)({
