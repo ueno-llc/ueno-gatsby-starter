@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "description": "Antonio Almena's Portfolio extended from https://github.com/ueno-llc/ueno-gatsby-starter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "keywords": [
     "gatsby",
@@ -56,6 +56,7 @@
     "postcss-preset-env": "^6.7.0",
     "react-dom": "16.12.0",
     "react-helmet": "5.2.1",
+    "react-markdown": "^4.3.1",
     "react-player": "^1.14.2",
     "renovate": "^19.38.7",
     "tslint-origin-ordered-imports-rule": "1.2.2",
@@ -72,7 +73,7 @@
     "@ueno/stylelint-config": "1.1.2",
     "@ueno/tslint-config": "1.0.8",
     "rimraf": "3.0.0",
-    "stylelint": "^8.0.0",
+    "stylelint": "^9.8.0",
     "tslint": "5.20.1",
     "tslint-react": "4.1.0",
     "typescript": "3.7.5"
