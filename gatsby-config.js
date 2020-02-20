@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'Antonio Almena Portfolio',
+    title: 'Antonio Almena IO',
     siteUrl: 'https://www.almena.io',
   },
   plugins: [
