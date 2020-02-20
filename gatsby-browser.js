@@ -8,7 +8,7 @@
 
 export const onServiceWorkerUpdateReady = () => {
   const answer = window.confirm(
-    `This site has been updated. ` +
+    `Hello. This site has been updated. ` +
     `Reload to display the latest version?`
   )
 
