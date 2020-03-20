@@ -77,5 +77,9 @@
     "tslint": "6.1.0",
     "tslint-react": "4.1.0",
     "typescript": "3.8.3"
+  },
+  "resolutions": {
+    "acorn": "^7.1.1",
+    "minimist": "^1.2.2"
   }
 }
