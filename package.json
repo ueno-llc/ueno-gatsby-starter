@@ -80,6 +80,6 @@
   },
   "resolutions": {
     "acorn": "^7.1.1",
-    "minimist": "^1.2.3"
+    "minimist": "^1.2.2"
   }
 }
