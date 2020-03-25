@@ -60,7 +60,7 @@
     "react-player": "1.15.2",
     "renovate": "19.181.0",
     "tslint-origin-ordered-imports-rule": "1.2.2",
-    "webpack": "4.42.0"
+    "webpack": "4.42.1"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
