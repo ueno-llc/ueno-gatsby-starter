@@ -57,7 +57,7 @@
     "react-dom": "16.13.1",
     "react-helmet": "5.2.1",
     "react-html-parser": "2.0.2",
-    "react-player": "1.15.2",
+    "react-player": "1.15.3",
     "renovate": "19.181.0",
     "tslint-origin-ordered-imports-rule": "1.2.2",
     "webpack": "4.42.1"
