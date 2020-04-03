@@ -1,0 +1,34 @@
+@import '~styles/config';
+
+.header {
+  display: block;
+
+  &__container {
+    @include container;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+
+    padding: $gutter 0;
+  }
+
+  &__logo {
+    &Svg {
+      display: block;
+
+      height: 16px;
+      width: auto;
+
+      @media (min-width: $min-768) {
+        height: 18px;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    margin-left: auto;
+  }
+}

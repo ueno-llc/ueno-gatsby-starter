@@ -5,7 +5,6 @@ module.exports = {
     title: 'Ueno Gatsby Starter',
   },
   plugins: [
-    'gatsby-plugin-ueno',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
@@ -37,4 +36,4 @@ module.exports = {
       },
     },
   ],
-}
+};

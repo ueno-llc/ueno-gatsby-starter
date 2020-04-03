@@ -1,0 +1,26 @@
+@import '~styles/config';
+
+.intro {
+  padding: 60px 0;
+
+  border-bottom: 1px solid #e5e5e5;
+
+  @media (min-width: $min-768) {
+    padding: 120px 0;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media (min-width: $min-768) {
+      @include grid-col(7);
+    }
+  }
+
+  &__text {
+    @include rf(26, 32);
+
+    font-family: $font-heading;
+    font-weight: 300;
+  }
+}

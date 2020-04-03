@@ -24,43 +24,94 @@
     "build": "gatsby build",
     "start": "gatsby serve --port ${PORT:-3000}",
     "clean": "rimraf .cache public",
-    "lint": "npm run tslint && npm run stylelint",
-    "tslint": "tslint --fix 'src/**/*.{ts,tsx}' -p .",
-    "stylelint": "stylelint 'src/**/*.scss' --syntax scss"
+    "lint": "npm run prettier && npm run tslint && npm run stylelint",
+    "tslint": "tslint --fix 'src/**/*.{ts,tsx}' --project tsconfig.json",
+    "stylelint": "stylelint 'src/**/*.scss' --syntax scss",
+    "prettier": "prettier --list-different '**/*.{ts,tsx,js,jsx,json,md}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json,md}": [
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "tslint --fix"
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-recommended",
+    "rules": {
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "if",
+            "else",
+            "mixin",
+            "each",
+            "include",
+            "function",
+            "return",
+            "warn",
+            "for"
+          ]
+        }
+      ],
+      "selector-pseudo-class-no-unknown": [
+        true,
+        {
+          "ignorePseudoClasses": [
+            "global"
+          ]
+        }
+      ]
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 100
   },
   "dependencies": {
-    "gatsby": "2.1.23",
-    "gatsby-image": "2.0.31",
+    "gatsby": "2.20.10",
+    "gatsby-image": "2.3.1",
     "gatsby-plugin-config": "1.0.7",
-    "gatsby-plugin-layout": "1.0.12",
-    "gatsby-plugin-manifest": "2.0.22",
-    "gatsby-plugin-react-helmet": "3.0.8",
-    "gatsby-plugin-react-svg": "2.1.0",
-    "gatsby-plugin-sharp": "2.0.25",
-    "gatsby-plugin-typescript": "2.0.10",
-    "gatsby-plugin-ueno": "2.0.1",
-    "gatsby-transformer-sharp": "2.1.15",
-    "gsap": "2.1.2",
-    "gsap-tools": "1.0.9",
-    "lodash": "4.17.11",
-    "react": "16.8.4",
-    "react-dom": "16.8.4",
-    "react-helmet": "5.2.0"
+    "gatsby-plugin-layout": "1.2.1",
+    "gatsby-plugin-manifest": "2.3.3",
+    "gatsby-plugin-react-helmet": "3.2.1",
+    "gatsby-plugin-react-svg": "3.0.0",
+    "gatsby-plugin-sharp": "2.5.3",
+    "gatsby-plugin-typescript": "2.3.1",
+    "gatsby-transformer-sharp": "2.4.3",
+    "lodash": "4.17.15",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-helmet": "5.2.1"
   },
   "devDependencies": {
-    "@babel/core": "7.3.4",
+    "@babel/core": "7.9.0",
+    "@babel/plugin-proposal-decorators": "7.8.3",
     "@types/gsap": "1.20.2",
-    "@types/lodash": "4.14.122",
-    "@types/node": "11.10.4",
-    "@types/react": "16.8.6",
-    "@types/react-dom": "16.8.2",
-    "@types/react-helmet": "5.0.8",
-    "@ueno/stylelint-config": "1.1.2",
-    "@ueno/tslint-config": "1.0.5",
-    "rimraf": "2.6.3",
-    "stylelint": "9.10.1",
-    "tslint": "5.13.1",
-    "tslint-react": "3.6.0",
-    "typescript": "3.3.3333"
+    "@types/lodash": "4.14.149",
+    "@types/node": "13.9.8",
+    "@types/react": "16.9.31",
+    "@types/react-dom": "16.9.6",
+    "@types/react-helmet": "5.0.15",
+    "classnames": "2.2.6",
+    "classnames-loader": "2.1.0",
+    "node-sass": "4.13.1",
+    "prettier": "2.0.2",
+    "rimraf": "3.0.2",
+    "sass-loader": "8.0.2",
+    "stylelint": "13.2.1",
+    "stylelint-config-recommended": "3.0.0",
+    "tslint": "6.1.1",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-react": "4.2.0",
+    "typescript": "3.8.3"
   }
 }

@@ -1,0 +1,45 @@
+@import '~styles/config';
+
+.block {
+  padding: 60px 0;
+
+  @media (min-width: $min-768) {
+    padding: 180px 0;
+  }
+
+  &__col {
+    @include grid-col;
+
+    @media (min-width: $min-768) {
+      @include grid-col(5);
+    }
+  }
+
+  &__heading {
+    @include rf(16, 18);
+
+    margin-bottom: 10px;
+
+    font-family: $font-heading;
+  }
+
+  &__description {
+    @include rf(16, 18);
+
+    font-weight: 300;
+    line-height: (26 / 16);
+
+    a { // stylelint-disable-line
+      text-decoration: none;
+      font-weight: 400;
+
+      color: #000;
+
+      transition: 200ms opacity ease-in-out;
+
+      &:hover { // stylelint-disable-line
+        opacity: 0.5;
+      }
+    }
+  }
+}

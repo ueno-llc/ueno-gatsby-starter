@@ -27,14 +27,15 @@ create-ueno-app gatsby my-app
 <details>
   <summary>Alternative setup</summary>
 
-  You also have the choice to use `gatsby-cli` to setup your project without installing `create-ueno-app`.
+You also have the choice to use `gatsby-cli` to setup your project without installing `create-ueno-app`.
 
-  ```bash
-  npm install -g gatsby-cli
-  gatsby new my-app "https://github.com/ueno-llc/ueno-gatsby-starter#master --recursive"
-  ```
+```bash
+npm install -g gatsby-cli
+gatsby new my-app "https://github.com/ueno-llc/ueno-gatsby-starter#master --recursive"
+```
 
-  We recommend you changing straight away `src/components/link/Link.tsx` which is use for our 3 starter kits. You probably want something similar to that: [Link.tsx](https://github.com/ueno-llc/create-ueno-app/blob/master/overwrites/gatsby/Link.tsx).
+We recommend you changing straight away `src/components/link/Link.tsx` which is use for our 3 starter kits. You probably want something similar to that: [Link.tsx](https://github.com/ueno-llc/create-ueno-app/blob/master/overwrites/gatsby/Link.tsx).
+
 </details>
 
 ## Things to know
@@ -62,9 +63,13 @@ Take the following code snippet as an example:
 import React from 'react';
 import s from './my-styles.scss';
 
-export const Button = ({ disabled, children }: { disabled: boolean, children: React.ReactNode }) => (
-  <button className={s('button', { disabled })}>{children}</button>
-);
+export const Button = ({
+  disabled,
+  children,
+}: {
+  disabled: boolean;
+  children: React.ReactNode;
+}) => <button className={s('button', { disabled })}>{children}</button>;
 ```
 
 ### SVG
@@ -72,6 +77,7 @@ export const Button = ({ disabled, children }: { disabled: boolean, children: Re
 You can import SVG files as React components by placing them in the `./src/assets/svg` folder.
 
 Usage:
+
 ```tsx
 import React from 'react';
 import Logo from 'assets/svg/logo.svg';

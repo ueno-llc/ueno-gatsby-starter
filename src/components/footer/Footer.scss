@@ -1,0 +1,31 @@
+@import '~styles/config';
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 40px 0;
+
+    border-bottom: 10px solid #8effbf;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-left: 30px;
+
+    transition: 200ms opacity ease-in-out;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
