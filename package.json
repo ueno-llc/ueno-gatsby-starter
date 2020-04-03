@@ -24,42 +24,74 @@
     "build": "gatsby build",
     "start": "gatsby serve --port ${PORT:-3000}",
     "clean": "rimraf .cache public",
-    "lint": "npm run tslint && npm run stylelint",
-    "tslint": "tslint --fix 'src/**/*.{ts,tsx}' --project tsconfig.json",
-    "stylelint": "stylelint 'src/**/*.scss'"
+    "lint": "npm run prettier && npm run tslint && npm run stylelint",
+    "tslint": "tslint --fix 'src/**/*.{ts,tsx}' --project src/tsconfig.json",
+    "stylelint": "stylelint 'src/**/*.{ts,tsx}'",
+    "prettier": "prettier --list-different '**/*.{ts,tsx,js,jsx,json,md}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json,md}": [
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "tslint --fix"
+    ]
+  },
+  "stylelint": {
+    "processors": [
+      "stylelint-processor-styled-components"
+    ],
+    "extends": [
+      "stylelint-config-recommended",
+      "stylelint-config-styled-components"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 100
   },
   "dependencies": {
-    "gatsby": "2.1.23",
-    "gatsby-image": "2.0.31",
+    "gatsby": "2.20.12",
+    "gatsby-image": "2.3.1",
     "gatsby-plugin-config": "1.0.7",
-    "gatsby-plugin-layout": "1.0.12",
-    "gatsby-plugin-manifest": "2.0.22",
-    "gatsby-plugin-react-helmet": "3.0.8",
-    "gatsby-plugin-react-svg": "2.1.2",
-    "gatsby-plugin-sharp": "2.0.25",
-    "gatsby-plugin-typescript": "2.0.10",
-    "gatsby-transformer-sharp": "2.1.15",
-    "lodash": "4.17.11",
-    "polished": "^3.4.2",
-    "react": "16.8.4",
-    "react-dom": "16.8.4",
-    "react-helmet": "5.2.0",
-    "styled-components": "^4.4.0"
+    "gatsby-plugin-layout": "1.2.1",
+    "gatsby-plugin-manifest": "2.3.3",
+    "gatsby-plugin-react-helmet": "3.2.1",
+    "gatsby-plugin-react-svg": "3.0.0",
+    "gatsby-plugin-sharp": "2.5.3",
+    "gatsby-plugin-typescript": "2.3.1",
+    "gatsby-transformer-sharp": "2.4.3",
+    "lodash": "4.17.15",
+    "polished": "3.5.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-helmet": "5.2.1",
+    "styled-components": "5.0.1"
   },
   "devDependencies": {
-    "@babel/core": "7.3.4",
-    "@types/lodash": "4.14.122",
-    "@types/node": "12.12.14",
-    "@types/react": "16.8.6",
-    "@types/react-dom": "16.8.2",
-    "@types/react-helmet": "5.0.8",
-    "@types/styled-components": "^4.1.19",
+    "@babel/core": "7.9.0",
+    "@types/lodash": "4.14.149",
+    "@types/node": "13.11.0",
+    "@types/react": "16.9.32",
+    "@types/react-dom": "16.9.6",
+    "@types/react-helmet": "5.0.15",
+    "@types/styled-components": "5.0.1",
     "@ueno/stylelint-config": "1.1.2",
-    "@ueno/tslint-config": "1.0.5",
-    "rimraf": "3.0.0",
-    "stylelint": "12.0.0",
-    "tslint": "5.13.1",
-    "tslint-react": "4.1.0",
-    "typescript": "3.3.3333"
+    "@ueno/tslint-config": "1.0.8",
+    "rimraf": "3.0.2",
+    "stylelint": "13.2.1",
+    "stylelint-config-recommended": "3.0.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-processor-styled-components": "1.10.0",
+    "tslint": "6.1.1",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-react": "4.2.0",
+    "typescript": "3.8.3"
   }
 }
