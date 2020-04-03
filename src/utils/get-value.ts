@@ -2,7 +2,7 @@ import { math } from 'polished';
 
 import { variables } from 'styles/variables';
 
-export const getValue = (nbr: string | number, fallback: number) => {
+export const getValue = (nbr: string | number | undefined, fallback: number) => {
   let value: string;
 
   if (typeof nbr === 'string') {

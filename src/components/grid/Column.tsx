@@ -52,7 +52,7 @@ const columnStyles = (props: TTheme) => css`
 `;
 
 // render media queries for (sm, md, lg, etc.)
-const breakpointStyles = (props) => {
+const breakpointStyles = (props: any) => {
   const output = [];
 
   for (const breakpointName in variables.breakpoints) {

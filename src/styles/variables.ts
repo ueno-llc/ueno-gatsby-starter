@@ -35,6 +35,8 @@ export const variables = {
     sm: { width: '420px', gutter: '30px' }, //  mobile
     md: { width: '720px', gutter: '50px' }, //  tablet
     lg: { width: '1080px', gutter: '70px' }, // desktop
+  } as {
+    [key: string]: { width: string; gutter: string };
   },
 
   // vertical breakpoints
