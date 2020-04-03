@@ -1,4 +1,6 @@
 .cache
-public
 node_modules
 .log
+package.json
+package-lock.json
+public

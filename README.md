@@ -29,6 +29,7 @@ You also have the possibility to use `gatsby-cli` to setup your project.
 ```bash
 npx gatsby new my-app "https://github.com/ueno-llc/ueno-gatsby-starter#master"
 ```
+
 </details>
 
 ## Deploy
