@@ -41,7 +41,7 @@ We have two branches:
 
 Refers to `create-ueno-app` document for more information on the different usage
 
-## Deploy
+### Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
 
