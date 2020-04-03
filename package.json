@@ -25,8 +25,8 @@
     "start": "gatsby serve --port ${PORT:-3000}",
     "clean": "rimraf .cache public",
     "lint": "npm run tslint && npm run stylelint",
-    "tslint": "tslint --fix 'src/**/*.{ts,tsx}' -p .",
-    "stylelint": "stylelint 'src/**/*.scss' --syntax scss"
+    "tslint": "tslint --fix 'src/**/*.{ts,tsx}' --project tsconfig.json",
+    "stylelint": "stylelint 'src/**/*.scss'"
   },
   "dependencies": {
     "gatsby": "2.1.23",
