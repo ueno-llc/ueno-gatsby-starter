@@ -1,4 +1,0 @@
-{
-  "extends": "@ueno/stylelint-config",
-  "ignoreFiles": ['**/*.ts', '**/*.tsx']
-}

@@ -9,79 +9,37 @@
 
 Kick off your project with this opinionated boilerplate. This barebones starter ships with the main Gatsby configuration files you might need.
 
-## Installation
-
-Install [create-ueno-app](https://github.com/ueno-llc/create-ueno-app):
+### Usage with [create-ueno-app](https://github.com/ueno-llc/create-ueno-app):
 
 ```bash
-npm install -g create-ueno-app
-yarn global add create-ueno-app
+npx create-ueno-app gatsby my-app
 ```
 
-Create your app:
+or
 
 ```bash
-create-ueno-app gatsby my-app
+yarn create ueno-app gatsby my-app
 ```
 
 <details>
   <summary>Alternative setup</summary>
 
-  You also have the choice to use `gatsby-cli` to setup your project without installing `create-ueno-app`.
+You also have the possibility to use `gatsby-cli` to setup your project.
 
-  ```bash
-  npm install -g gatsby-cli
-  gatsby new my-app "https://github.com/ueno-llc/ueno-gatsby-starter#master --recursive"
-  ```
+```bash
+npx gatsby new my-app "https://github.com/ueno-llc/ueno-gatsby-starter#master"
+```
 
-  We recommend you changing straight away `src/components/link/Link.tsx` which is use for our 3 starter kits. You probably want something similar to that: [Link.tsx](https://github.com/ueno-llc/create-ueno-app/blob/master/overwrites/gatsby/Link.tsx).
 </details>
 
-## Things to know
+### Branches
 
-There are couple of things that are good to know about this starter, compared to the default gatsby starter.
+We have two branches:
 
-### TypeScript
+- `master` supports `sass` styles
+- `styled` branch support `styled-components`
 
-We encourage TypeScript usage and have included basic linting.
-
-- Avoid `export default ...` - the only place you absolutely need to do this is in `./pages/*`. Rather `export const Module = ...` and `import { Module } from './file'` ([details](https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html))
-
-See the [TypeScript Handbook](https://basarat.gitbooks.io/typescript) for more tips and tricks
-
-### SCSS
-
-All `.scss` and `.sass` imports will:
-
-- include the [classnames package](https://www.npmjs.com/package/classnames-loader)
-- output [css modules](https://github.com/css-modules/css-modules)
-
-Take the following code snippet as an example:
-
-```tsx
-import React from 'react';
-import s from './my-styles.scss';
-
-export const Button = ({ disabled, children }: { disabled: boolean, children: React.ReactNode }) => (
-  <button className={s('button', { disabled })}>{children}</button>
-);
-```
-
-### SVG
-
-You can import SVG files as React components by placing them in the `./src/assets/svg` folder.
-
-Usage:
-```tsx
-import React from 'react';
-import Logo from 'assets/svg/logo.svg';
-
-export const Header = () => (
-  <header>
-    <Logo style={{ color: 'blue' }} />
-  </header>
-);
-```
+Refers to `create-ueno-app` document for more information on the different usage
 
 ## Deploy
 

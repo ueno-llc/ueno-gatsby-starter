@@ -1,10 +1,10 @@
-import * as React from 'react';
+import { useState, useEffect } from 'react';
 
 /**
  * Custom hooks that return the keys that are pressed on the keyboard
  */
 export const useKeyDown = () => {
-  const [keys, setKeys] = React.useState<number[]>([]);
+  const [keys, setKeys] = useState<number[]>([]);
 
   const handleKeyDown = ({ keyCode }: KeyboardEvent) => {
     if (keys.includes(keyCode)) {
@@ -20,7 +20,7 @@ export const useKeyDown = () => {
     setKeys([...keys.slice(0, d), ...keys.slice(d + 1)]);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     document.addEventListener('keydown', handleKeyDown, false);
     document.addEventListener('keyup', handleKeyUp, false);
 

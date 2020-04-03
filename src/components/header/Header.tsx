@@ -1,9 +1,14 @@
-import StarterLogo from 'assets/svg/starter-logo.svg';
-import { Container } from 'components/container/Container';
-import { Link } from 'gatsby';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
+
+import StarterLogo from 'assets/svg/starter-logo.svg';
+
 import { breakpoints, variables } from 'styles/variables';
+import { Container } from 'components/container/Container';
+
+interface HeaderProps {
+  children: ReactNode;
+}
 
 const HeaderRoot = styled.header`
   display: block;
@@ -32,19 +37,15 @@ const Navigation = styled.div`
   margin-left: auto;
 `;
 
-export function Header({ children }) {
-  return (
-    <HeaderRoot>
-      <Container>
-        <Content>
-          <Link to="/">
-            <a>
-              <Logo />
-            </a>
-          </Link>
-          <Navigation>{children}</Navigation>
-        </Content>
-      </Container>
-    </HeaderRoot>
-  );
-}
+export const Header = ({ children }: HeaderProps) => (
+  <HeaderRoot>
+    <Container>
+      <Content>
+        <a href="/">
+          <Logo />
+        </a>
+        <Navigation>{children}</Navigation>
+      </Content>
+    </Container>
+  </HeaderRoot>
+);

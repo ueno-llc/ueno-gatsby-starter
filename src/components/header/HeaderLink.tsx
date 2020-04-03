@@ -1,18 +1,22 @@
+import React, { ReactNode } from 'react';
 import { Link } from 'gatsby';
-import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
 import { breakpoints } from 'styles/variables';
 
 interface LinkProps {
   name: string;
-  to: string;
-  icon?: React.ReactNode;
+  href: string;
+  icon?: ReactNode;
 }
 
-const LinkElement = styled.a`
+const base = css`
   display: flex;
+
   margin-left: 40px;
+
   text-decoration: none;
+
   color: #404040;
   transition: 200ms opacity ease-in-out;
 
@@ -25,9 +29,14 @@ const LinkElement = styled.a`
   }
 `;
 
+const LinkElement = styled.a`
+  ${base};
+`;
+
 const Icon = styled.div`
   svg {
     position: relative;
+
     margin-right: 8px;
 
     path {
@@ -40,13 +49,17 @@ const Icon = styled.div`
   }
 `;
 
-export function HeaderLink({ name, to, icon }: LinkProps) {
-  const isLink = typeof to !== 'undefined';
-  const isExternal = isLink && /^((https?:)?\/\/|[0-9a-zA-Z]+:)/.test(to || '');
+const Lnk = styled(Link)`
+  ${base};
+`;
+
+export const HeaderLink = ({ name, href, icon }: LinkProps) => {
+  const isLink = typeof href !== 'undefined';
+  const isExternal = isLink && /^((https?:)?\/\/|[0-9a-zA-Z]+:)/.test(href || '');
 
   if (isExternal) {
     return (
-      <LinkElement href={to} target="_blank" rel={'noopener noreferrer'}>
+      <LinkElement href={href} target="_blank" rel={'noopener noreferrer'}>
         {icon && <Icon>{icon}</Icon>}
         {name}
       </LinkElement>
@@ -54,11 +67,9 @@ export function HeaderLink({ name, to, icon }: LinkProps) {
   }
 
   return (
-    <Link to={to}>
-      <LinkElement>
-        {icon && <Icon>{icon}</Icon>}
-        {name}
-      </LinkElement>
-    </Link>
+    <Lnk to={href}>
+      {icon && <Icon>{icon}</Icon>}
+      {name}
+    </Lnk>
   );
-}
+};

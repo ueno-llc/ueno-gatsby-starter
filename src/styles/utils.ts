@@ -1,9 +1,12 @@
 import { stripUnit } from 'polished';
 import { css } from 'styled-components';
-
 import { breakpoints, variables } from './variables';
 
-export function responsiveFont(minSize?: number | string, size?: number | string, limit?: number | string) {
+export function responsiveFont(
+  minSize?: number | string,
+  size?: number | string,
+  limit?: number | string,
+) {
   return function responseFontFn(props) {
     minSize = stripUnit(minSize || variables.font.sizeMin);
     size = stripUnit(size || variables.font.size);

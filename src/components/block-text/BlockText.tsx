@@ -1,13 +1,15 @@
-import { Container } from 'components/container/Container';
-import { Column, Row } from 'components/grid';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
+
 import { responsiveFont } from 'styles/utils';
 import { breakpoints, variables } from 'styles/variables';
+import { Container } from 'components/container/Container';
+import { Column } from 'components/grid/Column';
+import { Row } from 'components/grid/Row';
 
 interface BlockTextProps {
   heading: string;
-  description: React.ReactNode;
+  description: ReactNode;
 }
 
 const Block = styled.div`
@@ -19,20 +21,23 @@ const Block = styled.div`
 `;
 
 const Heading = styled.h3`
-  margin-bottom: 10px;
-  font-family: ${variables.font.family};
-
   ${responsiveFont(16, 18)}
+
+  margin-bottom: 10px;
+
+  font-family: ${variables.font.familyHeading};
 `;
 
 const Description = styled.p`
+  ${responsiveFont(16, 18)}
+
   font-weight: 300;
   line-height: ${26 / 16};
-  ${responsiveFont(16, 18)}
 
   a {
     text-decoration: none;
     font-weight: 400;
+
     color: #000;
     transition: 200ms opacity ease-in-out;
 
@@ -42,17 +47,15 @@ const Description = styled.p`
   }
 `;
 
-export function BlockText({ heading, description }: BlockTextProps) {
-  return (
-    <Container>
-      <Block>
-        <Row>
-          <Column md={5}>
-            <Heading>{heading}</Heading>
-            <Description>{description}</Description>
-          </Column>
-        </Row>
-      </Block>
-    </Container>
-  );
-}
+export const BlockText = ({ heading, description }: BlockTextProps) => (
+  <Container>
+    <Block>
+      <Row>
+        <Column md={5}>
+          <Heading>{heading}</Heading>
+          <Description>{description}</Description>
+        </Column>
+      </Row>
+    </Block>
+  </Container>
+);

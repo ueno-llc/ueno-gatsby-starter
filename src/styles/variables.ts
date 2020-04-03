@@ -51,4 +51,6 @@ export const breakpoints = Object.entries(variables.breakpoints).reduce(
     [key]: value.width,
   }),
   {},
-) as { [K in keyof typeof variables['breakpoints']]: string };
+) as {
+  [K in keyof typeof variables['breakpoints']]: string;
+};

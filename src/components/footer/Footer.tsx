@@ -1,6 +1,7 @@
-import { Container } from 'components/container/Container';
 import React from 'react';
 import styled from 'styled-components';
+
+import { Container } from 'components/container/Container';
 
 interface Social {
   icon: React.ReactNode;
@@ -22,7 +23,9 @@ const FooterRoot = styled.div`
 const Content = styled.div`
   display: flex;
   justify-content: space-between;
+
   padding: 40px 0;
+
   border-bottom: 10px solid #8effbf;
 `;
 
@@ -32,31 +35,32 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   margin-left: 30px;
+
   transition: 200ms opacity ease-in-out;
+
   &:hover {
     opacity: 0.5;
   }
 `;
 
-export function Footer({ logo, social }: FooterProps) {
-  return (
-    <FooterRoot>
-      <Container>
-        <Content>
-          <a href="https://ueno.co" target="_blank" rel="noopener noreferrer">
-            {logo}
-          </a>
-          <List>
-            {social.map(item => (
-              <ListItem key={item.to}>
-                <a href={item.to} target="_blank" rel="noopener noreferrer">
-                  {item.icon}
-                </a>
-              </ListItem>
-            ))}
-          </List>
-        </Content>
-      </Container>
-    </FooterRoot>
-  );
-}
+export const Footer = ({ logo, social }: FooterProps) => (
+  <FooterRoot>
+    <Container>
+      <Content>
+        <a href="https://ueno.co" target="_blank" rel="noopener noreferrer">
+          {logo}
+        </a>
+
+        <List>
+          {social.map((item) => (
+            <ListItem key={item.to}>
+              <a href={item.to} target="_blank" rel="noopener noreferrer">
+                {item.icon}
+              </a>
+            </ListItem>
+          ))}
+        </List>
+      </Content>
+    </Container>
+  </FooterRoot>
+);

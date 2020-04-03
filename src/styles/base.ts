@@ -1,26 +1,12 @@
 import { createGlobalStyle, css } from 'styled-components';
 
-import { fonts } from './fonts';
 import { resetStyles } from './reset';
-import { variables } from './variables';
 import { responsiveFont } from './utils';
+import { variables } from './variables';
 
 // stylelint-disable selector-type-no-unknown
 export const Styles = createGlobalStyle`
-  ${css`
-    ${resetStyles}
-    ${fonts}
-
-    @-ms-viewport {
-      width: device-width;
-    }
-    @-o-viewport {
-      width: device-width;
-    }
-    @viewport {
-      width: device-width;
-    }
-  `}
+  ${resetStyles}
 
   :root {
     --scale-element: 1;
@@ -51,7 +37,6 @@ export const Styles = createGlobalStyle`
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
     box-sizing: border-box;
   }
 
