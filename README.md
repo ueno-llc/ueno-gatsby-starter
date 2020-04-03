@@ -32,12 +32,6 @@ npx gatsby new my-app "https://github.com/ueno-llc/ueno-gatsby-starter#master"
 
 </details>
 
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
 ### Branches
 
 We have two branches:
@@ -46,3 +40,9 @@ We have two branches:
 - `styled` branch support `styled-components`
 
 Refers to `create-ueno-app` document for more information on the different usage
+
+### Deploy
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
