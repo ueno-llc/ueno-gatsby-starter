@@ -33,8 +33,8 @@
   },
   "dependencies": {
     "cssnano": "4.1.10",
-    "gatsby": "2.20.12",
-    "gatsby-image": "2.3.1",
+    "gatsby": "2.20.13",
+    "gatsby-image": "2.3.2",
     "gatsby-plugin-config": "1.0.7",
     "gatsby-plugin-layout": "1.2.1",
     "gatsby-plugin-manifest": "2.3.3",
