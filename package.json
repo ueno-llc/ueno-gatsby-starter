@@ -55,7 +55,7 @@
     "gsap-tools": "1.0.12",
     "postcss-preset-env": "6.7.0",
     "react-dom": "16.13.1",
-    "react-helmet": "5.2.1",
+    "react-helmet": "6.0.0",
     "react-html-parser": "2.0.2",
     "react-player": "1.15.3",
     "renovate": "19.204.4",
