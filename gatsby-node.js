@@ -20,7 +20,7 @@ exports.onCreateWebpackConfig = (
       sourceMap: !PRODUCTION,
       sassOptions: {
         ...sassOptions,
-        outputStyle: 'comptact',
+        outputStyle: 'compact',
       },
     },
   };
