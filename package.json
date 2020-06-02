@@ -63,7 +63,7 @@
     "webpack": "4.43.0"
   },
   "devDependencies": {
-    "@babel/core": "7.10.1",
+    "@babel/core": "7.10.2",
     "@types/gsap": "1.20.2",
     "@types/lodash": "4.14.153",
     "@types/node": "13.13.9",
