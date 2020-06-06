@@ -51,7 +51,7 @@
     "gatsby-source-filesystem": "2.3.10",
     "gatsby-source-graphql-universal": "3.4.0",
     "gatsby-transformer-sharp": "2.5.4",
-    "gsap": "3.3.0",
+    "gsap": "3.3.1",
     "gsap-tools": "1.0.12",
     "postcss-preset-env": "6.7.0",
     "react-dom": "16.13.1",
