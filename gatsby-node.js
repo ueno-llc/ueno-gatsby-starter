@@ -1,16 +1,16 @@
-exports.onCreateBabelConfig = ({ actions }) => {
+export function onCreateBabelConfig({ actions }) {
   actions.setBabelPlugin({
     name: '@babel/plugin-proposal-decorators',
     options: {
       legacy: true,
     },
   });
-};
+}
 
-exports.onCreateWebpackConfig = (
+export function onCreateWebpackConfig(
   { stage, actions, loaders },
   { postCssPlugins, ...sassOptions },
-) => {
+) {
   const PRODUCTION = stage !== 'develop';
   const isSSR = stage.includes('html');
 
@@ -44,4 +44,4 @@ exports.onCreateWebpackConfig = (
       modules: ['src', 'node_modules'],
     },
   });
-};
+}
