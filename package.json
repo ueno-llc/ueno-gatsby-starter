@@ -23,8 +23,8 @@
     "url": "https://github.com/9ntonio/portfolio"
   },
   "scripts": {
-    "dev": "gatsby develop",
-    "build": "gatsby build",
+    "dev": "gatsby --verbose develop",
+    "build": "gatsby --verbose build",
     "start": "gatsby serve --port ${PORT:-3000}",
     "clean": "rimraf .cache public",
     "lint": "yarn prettier && yarn tslint && yarn stylelint",
@@ -82,7 +82,7 @@
     "printWidth": 100
   },
   "dependencies": {
-    "gatsby": "2.23.17",
+    "gatsby": "2.23.18",
     "gatsby-image": "2.3.1",
     "gatsby-plugin-config": "1.0.7",
     "gatsby-plugin-layout": "1.2.1",
