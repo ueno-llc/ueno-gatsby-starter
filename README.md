@@ -38,9 +38,13 @@ Take the following code snippet as an example:
 import React from 'react';
 import s from './my-styles.scss';
 
-export const Button = ({ disabled, children }: { disabled: boolean, children: React.ReactNode }) => (
-  <button className={s('button', { disabled })}>{children}</button>
-);
+export const Button = ({
+  disabled,
+  children,
+}: {
+  disabled: boolean;
+  children: React.ReactNode;
+}) => <button className={s('button', { disabled })}>{children}</button>;
 ```
 
 ### SVG
@@ -48,6 +52,7 @@ export const Button = ({ disabled, children }: { disabled: boolean, children: Re
 You can import SVG files as React components by placing them in the `./src/assets/svg` folder.
 
 Usage:
+
 ```tsx
 import React from 'react';
 import Logo from 'assets/svg/logo.svg';
@@ -69,4 +74,4 @@ export const Header = () => (
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cd9d239a-46b6-4066-ad93-532bdd965572/deploy-status)](https://app.netlify.com/sites/agitated-saha-24099f/deploys)
 
-Please let me know if you have any questions or notes that you feel may help improve this project as I plan on expanding it's capabilities over time. I hope this helps 👋🏽. [`Antonio`](mailto:antonio.almena.sf@gmail.com). 
+Please let me know if you have any questions or notes that you feel may help improve this project as I plan on expanding it's capabilities over time. I hope this helps 👋🏽. [`Antonio`](mailto:antonio.almena.sf@gmail.com).
