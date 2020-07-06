@@ -23,8 +23,8 @@
     "url": "https://github.com/9ntonio/portfolio"
   },
   "scripts": {
-    "dev": "gatsby develop",
-    "build": "gatsby build",
+    "dev": "gatsby --verbose develop",
+    "build": "gatsby --verbose build",
     "start": "gatsby serve --port ${PORT:-3000}",
     "clean": "rimraf .cache public",
     "lint": "yarn prettier && yarn tslint && yarn stylelint",
