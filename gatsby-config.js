@@ -41,6 +41,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/resume`],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://www.almena.io',
