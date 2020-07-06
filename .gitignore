@@ -61,10 +61,12 @@ typings/
 .cache/
 public
 
+
 # Mac files
 .DS_Store
 
 # Yarn
+yarn.lock
 yarn-error.log
 .pnp/
 .pnp.js
