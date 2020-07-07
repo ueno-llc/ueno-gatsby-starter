@@ -14,6 +14,18 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-netlify',
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto`,
+            subsets: [`latin-ext`],
+            variants: [`300`, `400`, `700`]
+          },
+        ],
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
@@ -38,6 +50,12 @@ module.exports = {
         theme_color: '#99965b',
         display: 'minimal-ui',
         icon: 'src/assets/images/favicon.png',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/resume`],
       },
     },
     {
