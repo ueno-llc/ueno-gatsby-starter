@@ -1,7 +1,17 @@
 {
+<<<<<<< HEAD
   "automerge": true,
   "major": {
     "automerge": false
   },
   "includeForks": true
 }
+=======
+  "extends": ["config:base"],
+  "automerge": true,
+  "renovateFork": true,
+  "major": {
+    "automerge": false
+  }
+}
+>>>>>>> b585eaa... renovate base config
