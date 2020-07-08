@@ -82,7 +82,7 @@
     "printWidth": 100
   },
   "dependencies": {
-    "gatsby": "2.23.18",
+    "gatsby": "2.23.22",
     "gatsby-image": "2.3.1",
     "gatsby-plugin-config": "1.0.7",
     "gatsby-plugin-layout": "1.2.1",
