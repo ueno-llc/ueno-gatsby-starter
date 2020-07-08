@@ -1,24 +1,7 @@
 {
-  "includeForks": true,
-  "packageRules": [
-    {
-      "minor": {
-        "automerge": true
-      },
-      "pin": {
-        "automerge": true
-      },
-      "patch": {
-        "automerge": true
-      },
-      "digest": {
-        "automerge": true
-      }
-    }
-  ],
-  "extends": [
-      "config:base",
-      "monorepo:gatsby",
-      "schedule:daily"
-  ]
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "includeForks": true
 }
