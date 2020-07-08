@@ -1,9 +1,7 @@
 {
-  "config": {
-    "automerge": true,
-    "major": {
-      "automerge": false
-    },
-    "includeForks": true
-  }
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "includeForks": true
 }
