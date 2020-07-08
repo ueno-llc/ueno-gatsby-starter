@@ -1,8 +1,12 @@
 {
-  "extends": ["config:base"],
-  "automerge": true,
-  "renovateFork": true,
-  "major": {
-    "automerge": false
+  "config": {
+    "extends": [
+      "config:base"
+    ],
+    "automerge": true,
+    "major": {
+      "automerge": false
+    },
+    "includeForks": true
   }
 }
