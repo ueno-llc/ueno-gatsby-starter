@@ -94,7 +94,7 @@
     "gatsby-plugin-react-svg": "3.0.0",
     "gatsby-plugin-robots-txt": "1.5.1",
     "gatsby-plugin-sharp": "2.6.19",
-    "gatsby-plugin-sitemap": "2.4.10",
+    "gatsby-plugin-sitemap": "2.4.11",
     "gatsby-plugin-typescript": "2.4.13",
     "gatsby-source-filesystem": "2.3.18",
     "gatsby-source-graphql-universal": "3.4.0",
