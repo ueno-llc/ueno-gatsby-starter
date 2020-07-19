@@ -99,7 +99,7 @@
     "gatsby-source-filesystem": "2.3.20",
     "gatsby-source-graphql-universal": "3.4.0",
     "gatsby-transformer-sharp": "2.5.11",
-    "gsap": "3.4.0",
+    "gsap": "3.4.1",
     "gsap-tools": "1.0.12",
     "lodash": "4.17.19",
     "react": "16.13.1",
