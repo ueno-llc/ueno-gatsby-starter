@@ -107,7 +107,7 @@
     "react-helmet": "5.2.1",
     "react-html-parser": "2.0.2",
     "react-player": "2.6.0",
-    "renovate": "22.3.3"
+    "renovate": "22.3.4"
   },
   "devDependencies": {
     "@babel/core": "7.10.5",
