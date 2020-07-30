@@ -110,7 +110,7 @@
     "renovate": "22.7.0"
   },
   "devDependencies": {
-    "@babel/core": "7.10.5",
+    "@babel/core": "7.11.0",
     "@babel/plugin-proposal-decorators": "7.10.5",
     "@types/gsap": "1.20.2",
     "@types/lodash": "4.14.158",
