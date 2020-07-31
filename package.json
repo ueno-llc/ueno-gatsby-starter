@@ -126,7 +126,7 @@
     "sass-loader": "9.0.2",
     "stylelint": "13.6.1",
     "stylelint-config-recommended": "3.0.0",
-    "tslint": "6.1.1",
+    "tslint": "6.1.3",
     "tslint-config-prettier": "1.18.0",
     "tslint-react": "5.0.0",
     "typescript": "3.9.7"
