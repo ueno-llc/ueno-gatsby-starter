@@ -1,3 +1,8 @@
+# WARNING
+
+## This starter kit has been deprecated and is no longer being actively maintained by Ueno. 
+
+
 [![logo](https://user-images.githubusercontent.com/937328/51597521-57c62380-1ef3-11e9-99ed-7f9ac3f2804e.png)](https://ueno.co/?utm_source=github&utm_campaign=ueno-gatsby-starter)
 <br /><br />
 ![banner](https://user-images.githubusercontent.com/937328/53875866-6da02b80-3ffd-11e9-8f45-15e80e876c81.png)
